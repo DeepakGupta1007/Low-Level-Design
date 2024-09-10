@@ -1,0 +1,12 @@
+Bridge pattern decouples an abstraction from its 
+implementation so that the two can vary independently.
+
+// Use Case -
+Let's take an example of LivingThings,NonLivingThings i.e. Dog,Tree
+Fish and define a method breathingProcess for each of them.
+
+Now, let's say want to introduce new breathing process we need to create 
+an extra class for that. due to tightly coupling.
+
+
+Solution - Separate BreathProcess from these classes.
