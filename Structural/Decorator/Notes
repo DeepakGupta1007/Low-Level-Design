@@ -1,0 +1,15 @@
+Use Case-
+"class Pizza {
+  
+  // Extra toppings for pizza
+  boolean cheese;
+  boolean paneer;
+  boolean olive;
+  boolean mushroom;
+  boolean veg;
+  boolean chili;
+  
+  void description() {}
+  Double getPrice() {}
+  
+}"
