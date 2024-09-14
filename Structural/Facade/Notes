@@ -1,0 +1,12 @@
+Use Cases -
+
+Whenever we have to hide the system complexity.
+
+Example - Car Accelerator,Brake
+Example - We can process an order , getProduct,MakePayment,GenerateInvoice,SendNotification
+
+If done individually , change in the order process will be in the client so we can include this all inside facade.
+
+Proxy is for the same interface where as Facade is not.
+
+Adapter makes the client and orginal interface compatible.
