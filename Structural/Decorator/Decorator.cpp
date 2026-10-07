@@ -105,7 +105,7 @@ public:
 
 int main() {
     // Paneer and onion Radhika's fav
-    Pizza* pizza = new Onion(new Paneer(new BasePizza()));
+    Pizza* pizza = new Cheese(new Onion(new Paneer(new BasePizza())));
 
     std::cout << pizza->getDescription() << " having cost " << pizza->getPrice() << std::endl;
 
