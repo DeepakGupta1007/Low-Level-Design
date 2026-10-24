@@ -1,5 +1,6 @@
 import Elevtaor.ElevatorController;
 import Elevtaor.RequestType;
+import LFUCache.LFUController;
 import ParkingLot.ParkingLot;
 import ParkingLot.Vehicle.Bus;
 import ParkingLot.Vehicle.Vehicle;
@@ -27,7 +28,7 @@ public class Main {
 
         System.out.println("Welcome to Deepak Gupta LLD Codes");
         System.out.println(
-                "Enter number for simulating Design Code \n 1. Parking Lot \n 2. Elevator Controller \n 3. Split Wise \n 4. Rate Limiter");
+                "Enter number for simulating Design Code \n 1. Parking Lot \n 2. Elevator Controller \n 3. Split Wise \n 4. Rate Limiter \n 5. LFU Cache");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
 
@@ -114,13 +115,20 @@ public class Main {
                 System.out.println("\nAudit events:");
                 group.getAuditLog().forEach(System.out::println);
                 break;
-            
+
             case 4:
                 RateLimiterController rateLimiterController = RateLimiterController.getInstance();
                 rateLimiterController.demonstrateRateLimiterSlidingWindowCounter();
-            break;
+                break;
 
+            case 5:
+                LFUController lfuController = new LFUController();
+                lfuController.dryRunLfuHashMap();
+                break;
 
+            default:
+                System.out.println("Invalid choice");
+                break;
 
         }
 
