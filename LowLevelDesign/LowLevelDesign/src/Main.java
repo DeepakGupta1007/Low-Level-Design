@@ -3,6 +3,9 @@ import Elevtaor.RequestType;
 import ParkingLot.ParkingLot;
 import ParkingLot.Vehicle.Bus;
 import ParkingLot.Vehicle.Vehicle;
+import RateLimiter.RateLimiterController;
+import RateLimiter.Strategy.FixedWindowCounterRateLimiter;
+import RateLimiter.Strategy.RateLimiter;
 import SplitWise.dto.SettlementPlan;
 import SplitWise.model.Group;
 import SplitWise.model.User;
@@ -13,15 +16,18 @@ import SplitWise.strategy.settlement.SettlementStrategyFactory;
 import SplitWise.strategy.split.SplitStrategyFactory;
 import SplitWise.util.Money;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Welcome to Deepak Gupta LLD Codes");
-        System.out.println("Enter number for simulating Design Code \n 1. Parking Lot \n 2. Elevator Controller");
+        System.out.println(
+                "Enter number for simulating Design Code \n 1. Parking Lot \n 2. Elevator Controller \n 3. Split Wise \n 4. Rate Limiter");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
 
@@ -107,6 +113,14 @@ public class Main {
 
                 System.out.println("\nAudit events:");
                 group.getAuditLog().forEach(System.out::println);
+                break;
+            
+            case 4:
+                RateLimiterController rateLimiterController = RateLimiterController.getInstance();
+                rateLimiterController.demonstrateRateLimiterSlidingWindowCounter();
+            break;
+
+
 
         }
 
